@@ -1,0 +1,4 @@
+Bonjour, je suis une phrase écrite dans un fichier.
+42.1337
+J'ai 23 ans.
+moyenneVector : 14.9167

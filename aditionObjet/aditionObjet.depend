@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1625144319 source:d:\c++\aditionobjet\src\duree.cpp
+	"Duree.h"
+	<iostream>
+
+1625144172 d:\c++\aditionobjet\include\duree.h
+	<iostream>
+	<string>
+
+1625143641 source:d:\c++\aditionobjet\main.cpp
+	<iostream>
+	"Duree.h"
+

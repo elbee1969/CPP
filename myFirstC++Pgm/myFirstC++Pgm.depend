@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1624629773 source:d:\c++\myfirstc++pgm\main.cpp
+	<iostream>
+	<string>
+	"math.h"
+	<cmath>
+	<vector>
+	<fstream>
+
+1624572880 d:\c++\myfirstc++pgm\math.h
+	<vector>
+
+1624566383 source:d:\c++\myfirstc++pgm\math.cpp
+	"math.h"
+	<iostream>
+	<vector>
+
+1624578152 source:d:\c++\myfirstc++pgm\tableau.cpp
+
