@@ -9,6 +9,7 @@ class Personnage
     // Propriétés
 protected :
     std::string m_nom;
+    std::string m_role;
     int m_vie;
     int m_mana;
     Arme *m_arme;
@@ -34,10 +35,13 @@ public:
 
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
 
+    void changerStatus(std::string status);
+
     bool estVivant() const;
 
     int getVie();
     void afficherEtat() const;
+
 
 };
 #endif // PERSONNAGE_H_INCLUDED

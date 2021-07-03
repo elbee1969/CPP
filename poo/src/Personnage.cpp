@@ -6,7 +6,7 @@
 #include<cstdlib>"
 using namespace std;
 
-Personnage::Personnage(string nom) : m_nom(nom), m_arme(0), m_vie(100), m_mana(100)
+Personnage::Personnage(string nom) : m_nom(nom), m_role("paysan"), m_arme(0), m_vie(100), m_mana(100)
 {
     m_arme = new Arme();
 }
@@ -18,7 +18,7 @@ Personnage::Personnage(string nom) : m_nom(nom), m_arme(0), m_vie(100), m_mana(1
     m_degatsArme = 10;
 }
 */
-Personnage::Personnage(string nom, string nomArme, int degatsArme) :m_nom(nom), m_arme(0), m_vie(100), m_mana(100)
+Personnage::Personnage(string nom, string nomArme, int degatsArme) :m_nom(nom), m_role("paysan"), m_arme(0), m_vie(100), m_mana(100)
 {
     m_arme = new Arme(nomArme,degatsArme);
 }
@@ -75,6 +75,10 @@ void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
     m_arme->changer(nomNouvelleArme,degatsNouvelleArme);
 }
 
+void Personnage::changerStatus(string status)
+{
+    m_role = status;
+}
 bool Personnage::estVivant() const
 {
     return m_vie > 0;
@@ -87,10 +91,12 @@ int Personnage::getVie()
 void Personnage::afficherEtat()const
 {
 cout << "Nom : " << m_nom << endl;
+cout << "Status : " << m_role << endl;
     cout << "Vie : " << m_vie << endl;
     cout << "Mana : " << m_mana << endl;
     m_arme->afficher();
 }
+
 Personnage::~Personnage()
 {
     delete m_arme;

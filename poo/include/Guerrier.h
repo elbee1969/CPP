@@ -14,6 +14,7 @@ int m_mana;
 
 public:
     Guerrier(std::string nom);
+        void attaquer(Personnage &cible);
 };
 
 #endif // GUERRIER_H

@@ -13,15 +13,15 @@ using namespace std;
 int main()
 {
     //Création des personnages
-    Guerrier guerrier("Kharahk");
-    guerrier.changerArme("Double hache tranchante vénéneuse de la mort", 50);
-    Magicien mage("Merlin");
+    Guerrier kharahk("Kharahk");
+    kharahk.changerArme("Double hache tranchante vénéneuse de la mort", 50);
+    Magicien merlin("Merlin");
     Personnage david("David"), goliath("Goliath","Épée aiguisée", 20);
 
     cout << "Kharahk" <<  endl;
-    guerrier.afficherEtat();
+    kharahk.afficherEtat();
     cout << "Merlin" <<  endl;
-    mage.afficherEtat();
+    merlin.afficherEtat();
     cout << "David" << endl;
     david.afficherEtat();
     cout << endl << "Goliath" << endl;
@@ -50,6 +50,14 @@ int main()
     cout << "David after shock" << endl;
     david.afficherEtat();
     //Temps mort ! Voyons voir la vie de chacun…
+    cout << "David final state" << endl;
+    david.afficherEtat();
+    cout << "guerrison Merlin" << endl;
+    merlin.sortGuerrison(david);
+    cout << "David final state" << endl;
+    david.afficherEtat();
+    cout << "guerrison Merlin" << endl;
+    merlin.sortGuerrison(david);
     cout << "David final state" << endl;
     david.afficherEtat();
     cout << endl << "Goliath final state" << endl;
