@@ -15,11 +15,13 @@ protected :
     Arme *m_arme;
 private :
     // Méthodes
+    static int compteur;
 public:
     // constructeur par défaut
     Personnage(std::string nom);
 
     ~Personnage();
+    static int nbrInstances();
     // constructeur pour surcharcher arme
     Personnage(std::string nom, std::string nomArme, int degatsArme);
 

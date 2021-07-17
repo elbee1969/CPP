@@ -5,10 +5,12 @@
 #include<ctime>
 #include<cstdlib>"
 using namespace std;
+int Personnage::compteur = 0;
 
 Personnage::Personnage(string nom) : m_nom(nom), m_role("paysan"), m_arme(0), m_vie(100), m_mana(100)
 {
     m_arme = new Arme();
+    ++compteur;
 }
 /* autre façon de construire le constructeur
 {
@@ -100,4 +102,10 @@ cout << "Status : " << m_role << endl;
 Personnage::~Personnage()
 {
     delete m_arme;
+    --compteur;
+}
+
+int Personnage::nbrInstances()
+{
+    return compteur;
 }

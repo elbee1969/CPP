@@ -12,10 +12,20 @@ using namespace std;
 
 int main()
 {
+
+
+    Personnage *monTruc(0);
+Arme *monBidule = new Arme();
+
+monTruc = monBidule;
+
+
+
     //Création des personnages
     Guerrier kharahk("Kharahk");
     kharahk.changerArme("Double hache tranchante vénéneuse de la mort", 50);
     Magicien merlin("Merlin");
+    Personnage mike("Mike");
     Personnage david("David"), goliath("Goliath","Épée aiguisée", 20);
 
     cout << "Kharahk" <<  endl;
@@ -62,6 +72,8 @@ int main()
     david.afficherEtat();
     cout << endl << "Goliath final state" << endl;
     goliath.afficherEtat();
+
+    cout << "il y a : " << Personnage::nbrInstances()<< " personnages present" << endl;
 
     return 0;
 }
